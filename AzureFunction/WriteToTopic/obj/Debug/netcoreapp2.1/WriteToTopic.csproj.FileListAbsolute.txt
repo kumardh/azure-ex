@@ -1,0 +1,11 @@
+D:\Personal\Azure\AzureFunction\WriteToTopic\bin\Debug\netcoreapp2.1\WriteToTopic.deps.json
+D:\Personal\Azure\AzureFunction\WriteToTopic\bin\Debug\netcoreapp2.1\WriteToTopic.runtimeconfig.json
+D:\Personal\Azure\AzureFunction\WriteToTopic\bin\Debug\netcoreapp2.1\WriteToTopic.runtimeconfig.dev.json
+D:\Personal\Azure\AzureFunction\WriteToTopic\bin\Debug\netcoreapp2.1\WriteToTopic.dll
+D:\Personal\Azure\AzureFunction\WriteToTopic\bin\Debug\netcoreapp2.1\WriteToTopic.pdb
+D:\Personal\Azure\AzureFunction\WriteToTopic\obj\Debug\netcoreapp2.1\WriteToTopic.csproj.CoreCompileInputs.cache
+D:\Personal\Azure\AzureFunction\WriteToTopic\obj\Debug\netcoreapp2.1\WriteToTopic.AssemblyInfoInputs.cache
+D:\Personal\Azure\AzureFunction\WriteToTopic\obj\Debug\netcoreapp2.1\WriteToTopic.AssemblyInfo.cs
+D:\Personal\Azure\AzureFunction\WriteToTopic\obj\Debug\netcoreapp2.1\WriteToTopic.dll
+D:\Personal\Azure\AzureFunction\WriteToTopic\obj\Debug\netcoreapp2.1\WriteToTopic.pdb
+D:\Personal\Azure\AzureFunction\WriteToTopic\obj\Debug\netcoreapp2.1\WriteToTopic.csprojAssemblyReference.cache

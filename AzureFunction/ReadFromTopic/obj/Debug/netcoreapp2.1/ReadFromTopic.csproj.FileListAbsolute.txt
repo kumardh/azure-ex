@@ -1,0 +1,11 @@
+D:\Personal\Azure\AzureFunction\ReadFromTopic\obj\Debug\netcoreapp2.1\ReadFromTopic.csproj.CoreCompileInputs.cache
+D:\Personal\Azure\AzureFunction\ReadFromTopic\obj\Debug\netcoreapp2.1\ReadFromTopic.AssemblyInfoInputs.cache
+D:\Personal\Azure\AzureFunction\ReadFromTopic\obj\Debug\netcoreapp2.1\ReadFromTopic.AssemblyInfo.cs
+D:\Personal\Azure\AzureFunction\ReadFromTopic\bin\Debug\netcoreapp2.1\ReadFromTopic.deps.json
+D:\Personal\Azure\AzureFunction\ReadFromTopic\bin\Debug\netcoreapp2.1\ReadFromTopic.runtimeconfig.json
+D:\Personal\Azure\AzureFunction\ReadFromTopic\bin\Debug\netcoreapp2.1\ReadFromTopic.runtimeconfig.dev.json
+D:\Personal\Azure\AzureFunction\ReadFromTopic\bin\Debug\netcoreapp2.1\ReadFromTopic.dll
+D:\Personal\Azure\AzureFunction\ReadFromTopic\bin\Debug\netcoreapp2.1\ReadFromTopic.pdb
+D:\Personal\Azure\AzureFunction\ReadFromTopic\obj\Debug\netcoreapp2.1\ReadFromTopic.csprojAssemblyReference.cache
+D:\Personal\Azure\AzureFunction\ReadFromTopic\obj\Debug\netcoreapp2.1\ReadFromTopic.dll
+D:\Personal\Azure\AzureFunction\ReadFromTopic\obj\Debug\netcoreapp2.1\ReadFromTopic.pdb

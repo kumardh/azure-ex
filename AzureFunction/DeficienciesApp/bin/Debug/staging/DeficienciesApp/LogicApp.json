@@ -1,0 +1,140 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "logicAppName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80,
+      "metadata": {
+        "description": "Name of the Logic App."
+      }
+    },
+    "logicAppLocation": {
+      "type": "string",
+      "defaultValue": "centralus",
+      "allowedValues": [
+        "[resourceGroup().location]",
+        "eastasia",
+        "southeastasia",
+        "centralus",
+        "eastus",
+        "eastus2",
+        "westus",
+        "northcentralus",
+        "southcentralus",
+        "northeurope",
+        "westeurope",
+        "japanwest",
+        "japaneast",
+        "brazilsouth",
+        "australiaeast",
+        "australiasoutheast",
+        "southindia",
+        "centralindia",
+        "westindia",
+        "canadacentral",
+        "canadaeast",
+        "uksouth",
+        "ukwest",
+        "westcentralus",
+        "westus2"
+      ],
+      "metadata": {
+        "description": "Location of the Logic App."
+      }
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "name": "[parameters('logicAppName')]",
+      "type": "Microsoft.Logic/workflows",
+      "location": "[parameters('logicAppLocation')]",
+      "tags": {
+        "displayName": "LogicApp"
+      },
+      "apiVersion": "2016-06-01",
+      "properties": {
+        "definition": {
+          "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+          "actions": {
+            "FuncEvaluationRequest_2": {
+              "type": "Function",
+              "inputs": {
+                "function": {
+                  "id": "/subscriptions/6fa4274f-49e4-4904-b360-73124fe4917f/resourceGroups/DefApp/providers/Microsoft.Web/sites/GetEvaluationRequest20181201123757/functions/FuncEvaluationRequest"
+                }
+              },
+              "runAfter": {}
+            },
+            "FuncGetRequiredPeriod": {
+              "type": "Function",
+              "inputs": {
+                "function": {
+                  "id": "/subscriptions/6fa4274f-49e4-4904-b360-73124fe4917f/resourceGroups/DefApp/providers/Microsoft.Web/sites/GetRequiredPeriod20181201124552/functions/FuncGetRequiredPeriod"
+                }
+              },
+              "runAfter": {
+                "FuncEvaluationRequest_2": [
+                  "Succeeded"
+                ]
+              }
+            },
+            "Response": {
+              "type": "Response",
+              "kind": "http",
+              "inputs": {
+                "statusCode": 200,
+                "body": "@{body('FuncGetRequiredPeriod')}\n",
+                "schema": {
+                  "Status": "Pass"
+                }
+              },
+              "runAfter": {
+                "FuncGetRequiredPeriod": [
+                  "Succeeded"
+                ]
+              }
+            }
+          },
+          "parameters": {},
+          "triggers": {
+            "manual": {
+              "type": "Request",
+              "kind": "Http",
+              "inputs": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "loanKey": {
+                      "type": "string"
+                    },
+                    "globalPropertyId": {
+                      "type": "integer"
+                    },
+                    "evaluationPeriods": {
+                      "type": "object",
+                      "properties": {
+                        "startDate": {
+                          "type": "string"
+                        },
+                        "endDate": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "contentVersion": "1.0.0.0",
+          "outputs": {}
+        },
+        "parameters": {}
+      }
+    }
+  ],
+  "outputs": {}
+}
