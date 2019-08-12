@@ -6,7 +6,7 @@ Above paragraphs are taken from https://docs.microsoft.com/en-us/azure/architect
 
 Here I am trying to attempt to Use various Azure Service to shape it into traditional Enterprise Architecture. The whole objective of this exercise is to learn following Azure Service and design a high-level enterprise solution.
 
-This is code repository for the my Posts added to Codementor.
+This is code repository for the Posts added to Codementor.
 
 https://www.codementor.io/dhananjaykumar/azure-application-architecture-xrj1hbl1w
 
